@@ -2,13 +2,24 @@ package com.rameripscursos.domain;
 
 import java.io.Serializable;
 
+import javax.annotation.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 //Atalho para a importação das bibliotecas necessárias, click em "CTRL + SHIFT + O"
 //Aqui abaixo temos a criação da classe principal deste layout
+//O "@Entity" tem que ser o do "java.persistence.Entity"
+@Entity
 public class Categoria implements Serializable {
 	//O "serialVersionUID = 1L" é gerado para implementar o "Serializable" acima
 	private static final long serialVersionUID = 1L;
 	
-	//Aqui abaixo temos a criação dos atributos e seus tipos da classe "Categoria" 
+	//Aqui será gerenciada a criação automática dos "Ids" da classe "Categoria"
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//Aqui abaixo temos a criação dos atributos e seus tipos da classe "Categoria"
 	private Integer id;
 	private String nome;
 	
