@@ -9,5 +9,4 @@ public class RameripsCursosApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RameripsCursosApplication.class, args);
 	}
-
 }
